@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Cutting Simulator</title>
+    <link rel="stylesheet" href="c2.css">
+</head>
+
+<body>
+    <h1>Your birthday cake</h1>
+    <h6>click on the flames to blow candles </h6>
+<div class="balloon red bounce">
+<div class="ribbon"></div>
+</div>
+<div class="balloon blue bounce">
+    <div class="ribbon"></div>
+</div>
+<div class="balloon green bounce">
+    <div class="ribbon"></div>
+</div>
+<div class="balloon yellow bounce">
+<div class="ribbon"></div>
+</div>
+<div class="balloon pink bounce">
+<div class="ribbon"></div>
+</div>
+<div class="balloon voilet bounce">
+    <div class="ribbon"></div>
+</div>
+<div id="birthday-cake">
+    <div class="cake">
+    <div class="middle"></div>
+    <div class="chocs"></div>
+    <div class="top"></div>
+    </div>
+    <div class="candles">
+        <div class="flames"></div>
+        <div class="flames2"></div>
+        <div class="flames3"></div>
+        <div class="shadows"></div>
+    </div>
+</div>
+<div class="flames" onclick="this.classList.toggle('off')"></div>
+<div class="flames2" onclick="this.classList.toggle('off')"></div>
+<div class="flames3" onclick="this.classList.toggle('off')"></div>
+<div class="clck"><a  href="wish.html"><button class="btn">Go next</button</a></div>
+
+    <script src="scrpt.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="
+                    https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+                    "></script>
+</body>
+
+</html>

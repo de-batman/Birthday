@@ -1,0 +1,333 @@
+.clck{
+    position: absolute;
+        top: 40%;
+        left: 2%;
+}
+.btn{
+    border: none;
+        background-color: inherit;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+}
+.btn:hover {
+    background: #eee;
+}
+h1{
+    position:absolute;
+    top:2%;
+    font-size: 65px;
+    font-family:"BruSsh Script MT",cursive;
+    color: #ddb892;
+}
+h6{
+    position: absolute;
+    font-size: 40px;
+    top: 65%;
+    font-family: "BruSsh Script MT", cursive;
+    color: #ddb892;
+}
+body{
+    display:flex;
+    height:100vh;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    background-color:#f07167;
+}
+#birthday-cake{
+    position:relative;
+    top:50px;
+    left:0;
+}
+#birthday-cake:before{
+    content:"";
+    position:absolute;
+    background-color: #ede0d4;
+    width:400px;
+    height:140px;
+    border-radius: 50%;
+    transform: translate(-50%,-10%);
+    box-shadow:inset -2px -5px #e6ccb2;
+}
+.cake{
+    position:absolute;
+    background-color:#ddb892;
+    width:350px;
+    height: 130px;
+    transform: translate(-50%,-60%);
+}
+.cake:before, .cake:after{
+    content:"";
+    position: absolute;
+}
+.cake::before, .middke, .middle:before{
+  border-radius:50% 50% 50% 50%/0% 0% 100% 100%;  
+  width: 350px;
+  height:50px
+}
+.cake:before{
+    background-color:#ddb892;
+    top:130px;
+}
+.cake:after{
+    background-color: #b08968;
+    width:350px;
+    height:30px;
+    top:50px;
+}
+.middle{
+    position:absolute;
+    background-color:#b08968;
+    top:80px;
+    z-index:1;
+}
+.middle:before{
+    content:"";
+    position:absolute;
+    background-color:#ddb892 ;
+    top:-35px;
+}
+.top{
+    position:absolute;
+    background-color: #7f5539;
+    width: 350px;
+    height:90px;
+    border-radius: 50%;
+    z-index:2;
+    top:-45px;
+    box-shadow:inset -5px -1px #fff, inset -70px 2px rgba(255,255,255,.1);
+}
+.chocs{
+    position:absolute;
+    width:55px;
+    height:50px;
+    background-color: #7f5539;
+    top:0;
+    z-index: 1;
+    border-radius: 50% 50% 50% 50%/0% 0% 100% 100%;
+    z-index: 1;
+    
+        border-radius: 50% 50% 50% 50% 0% 0% 100% 100%;
+    
+        box-shadow: 49px 20px #715539, 98px 25px #715539, 147px 30px #7f5539, 196px 25px #715539, 245px 20px #715539, 295px 0 #7f5539, 0px 4px #fff, 49px 24px #fff, 98px 29px #fff, 147px 34px #fff, 196px 29px #fff, 245px 24px #fff, 295px 4px #fff;
+}
+.chocos:before{
+    content:"";
+    position: absolute;
+    width:175px;
+    height:180px;
+    background-color: rgba(255,255,255,.1);
+    border-radius: 100% 0 100% 0%/0% 72% 28% 100%;
+    left: 175px;
+    top:0;
+}
+.candles{
+    position: absolute;
+    width:30px;
+    height:80px;
+    background-color: #0081a7;
+    top: -160px;
+    left:-20px;
+    box-shadow: 50px 20px #0081a7,-50px 20px #0081a7;
+}
+.candles:before{
+    content:"";
+    width:30px;
+    height:10px;
+    background-color:#0081a7;
+    position:absolute;
+    border-radius:50%;
+    top:-5px;
+    box-shadow:0 80px #0081a7, -50px 20px #0081a7, -50px 100px #0081a7,50px 20px #0081a7,50px 100px #0081a7,inset 2px -1px #fff;
+}
+.candles:after {
+    content: "";
+    width: 30px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    top:19%;
+    left:166%;
+    box-shadow: inset 2px -1px #fff;
+}
+.shadows{
+    position:absolute;
+    width:30px;
+    height:10px;
+    box-shadow: inset 2px -1px #fff;
+    left:-50px;
+    top:15px;
+    border-radius: 50%;
+    }
+.shadows:before {
+            content:"";
+            width: 1.5px;
+            height: 15px;
+            background-color:#333;
+            left:14.5px;
+            position: absolute;
+            
+            top: -10px;
+            box-shadow: 50px -20px #333, 100px 0 #333;
+        }
+.shadows:after {
+    content: "";
+    width: 15px;
+    height: 90px;
+    left:15px;
+    background-color:rgba(255,255,255,.1);
+    position: absolute;
+    border-radius: 0% 100% 50% 50%/100% 6% 10% 0%;
+    top: -5px;
+    box-shadow: 50px -20px rgba(255,255,255,.1),100px 0 rgba(255,255,255,.1);
+}
+.flames,.flames2 ,.flames3{
+    cursor:pointer;
+    width:30px;
+    height:30px;
+    transform: rotate(-45deg);
+    z-index:4;
+    background-color:rgba(252,191,73,.8);
+    transition: .5s;
+    animation: flames .5s infinite;
+}
+.flames,.flames:before,.flames2,.flames2::before,.flames3,.flames3:before{
+    position: absolute;
+    border-radius: 80% 15% 55% 50%/55% 15% 80% 50%;
+}
+.flames{
+    top:-40px;
+}
+.flames2,.flames3{
+    top:-20px;
+}
+.flames2{
+    left:-50px;
+}
+.flames3{
+    left: 50px;
+}
+.flame:before, .flames2:before, .flames:before{
+    content:"";
+    background-color: rgba(255,255,255,.1);
+width:20px;
+height:20px;
+top:5px;
+left:5px;
+}
+@keyframes flames {
+    0%,25%,100% {transform: scaleY(1) rotate(-45deg);}
+
+    50%, 75% {transform: scaleY(1.1) rotate(-45deg);}
+    }
+.off {
+    background-color: transparent !important;
+    animation: none !important;
+}
+.balloon {
+    width: 55px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    top:0%;
+    display: inline-block;
+}
+
+.balloon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 30px;
+    border-radius: 80%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.red {
+    background-color: #ff69b4;
+    position:absolute;
+    left:5%;
+    top:8%
+    
+}
+
+.blue {
+    background-color: #87ceeb;
+    position: absolute;
+        left: 15%;
+        top:3%
+}
+
+.green {
+    background-color: #32cd32;
+
+position: absolute;
+    left: 25%;
+}
+.yellow {
+    background-color: yellow;
+    position: absolute;
+    left: 70%;
+}
+.pink {
+    background-color: pink;
+    position: absolute;
+    left: 80%;
+    top: 3%
+}
+.voilet {
+    background-color:violet;
+    position: absolute;
+    left: 90%;
+    top: 8%
+}
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+ .ribbon {
+     position: absolute;
+     top: 98%;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 1px;
+     height: 50px;
+     background-color: #524d4d;
+     border: 1px solid #302b2b;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ }
+
+ .ribbon::before {
+     content: "";
+     position: absolute;
+     top: 13%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     background-color: #231b1b;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ }

@@ -1,0 +1,110 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("back.jpg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Style the slideshow containers */
+
+.slideshow-container,
+.slideshow-container1,
+.slideshow-container2,
+.slideshow-container3,
+.slideshow-container4,
+.slideshow-container5,
+.slideshow-container6,
+.slideshow-container7{
+    position: absolute;
+    width: 20%;
+    height: 40%;
+    background-color: #333;
+    overflow: hidden;
+}
+
+.slideshow-container {
+    top: calc(10% + 50px);
+    left: calc(40% + 50px);
+}
+
+.slideshow-container1 {
+    top: calc(30% + 50px);
+    left: calc(20% + 50px);
+}
+
+.slideshow-container2 {
+    top: calc(50% + 50px);
+    right: calc(33.4% + 50px);
+}
+.slideshow-container3 {
+    top: calc(10% + 50px);
+    right: calc(73.4% + 50px);
+}
+.slideshow-container4 {
+    top: calc(70% + 50px);
+    right: calc(53.4% + 50px);
+}
+.slideshow-container5 {
+    top: calc(50% + 50px);
+    right: calc(73.4% + 50px);
+}
+.slideshow-container6 {
+    top: calc(90% + 50px);
+    right: calc(73.4% + 50px);
+}
+.slideshow-container7 {
+    top: calc(110% + 50px);
+    right: calc(53.4% + 50px);
+}
+
+/* Style the images */
+
+.slideshow-container img,
+.slideshow-container1 img,
+.slideshow-container2 img,
+.slideshow-container3 img,
+.slideshow-container4 img,
+.slideshow-container5 img,
+.slideshow-container6 img,
+.slideshow-container7 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s;
+}
+
+/* Add a fade-in effect to the images */
+
+.slideshow-container img.active,
+.slideshow-container1 img.active,
+.slideshow-container2 img.active,
+.slideshow-container3 img.active,
+.slideshow-container4 img.active,
+.slideshow-container5 img.active,
+.slideshow-container6 img.active,
+.slideshow-container7 img.active {
+    opacity: 1;
+}
+
+.slideshow-container img:not(.active),
+.slideshow-container1 img:not(.active),
+.slideshow-container2 img:not(.active),
+.slideshow-container3 img:not(.active),
+.slideshow-container4 img:not(.active),
+.slideshow-container5 img:not(.active),
+.slideshow-container6 img:not(.active),
+.slideshow-container7 img:not(.active) {
+    opacity: 0;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish</title>
+    <style>
+        body {
+            background-image: url("pexels-photo-1303081.jpeg");
+            background-size: cover;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 50px;
+            color: beige;
+            opacity: 0;
+            /* initial opacity */
+            transition: opacity 0.5s;
+            /* animation duration */
+            white-space: pre-wrap;
+            /* allow line breaks */
+        }
+
+        .message.show {
+            opacity: 1;
+            /* final opacity */
+        }
+
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            border: 2px solid #333;
+            border-radius: 50%;
+            animation: loading 4s linear infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .message-slide {
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+                visibility: visible;
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        /* Add some animation effects to the message */
+        .message {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0%{
+                opacity: 0;
+            }
+            20%{
+                opacity:0.2;
+            }
+            40%{
+                opacity:0.4;
+            }
+            60%{
+                opacity:0.6;
+            }
+            80%{
+                opacity:0.8;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Add some animation effects to the loader */
+        .loader {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader"></div>
+    <div class="message" id="message"></div>
+    <script>
+        let message = [
+            "Happy birthday, dear friend! 🎂",
+            "On this remarkable day","I want to take a moment to celebrate you—the incredible person you are. 🌟",
+            "Your presence in this world brings","joy","laughter", "and","inspiration","to everyone around you."," As the sun rises on another year of your life"," may it illuminate your path with boundless possibilities and endless happiness.",
+            "May your days be filled"," with:",
+            "Love: May your heart overflow with love—from family, friends, and even strangers."," May you experience the warmth of genuine connections and the magic of shared moments.",
+            "Laughter: Let laughter be your constant companion."," May your days be sprinkled with giggles, hearty chuckles, and belly laughs that echo through the years.",
+            "Dreams: Dream big, my friend! May your aspirations soar higher than the highest mountain peaks."," May you chase your dreams with unwavering determination and find fulfillment in their pursuit.",
+            "Health: May your body be a temple of wellness."," May each heartbeat remind you of the precious gift of life."," May you dance, run, and savor every breath.",
+            "Adventure: Life is an adventure waiting to unfold."," May you explore new horizons, discover hidden treasures, and embrace the thrill of the unknown.",
+            "Wisdom: With each passing year, may you gain wisdom—the kind that comes from both triumphs and challenges."," May you learn, grow, and share your insights with grace.",
+            "Kindness: Be a beacon of kindness."," May your actions ripple through the lives of others, leaving behind a trail of compassion, empathy, and goodwill.",
+            "Memories: May your memory bank be richly stocked with beautiful moments."," May you collect memories like seashells on a beach—each one unique and precious.",
+            "Friendship: Cherish old friendships and welcome new ones."," May your heart be a magnet for kindred spirits, and may your bonds withstand the tests of time.",
+            "Purpose: You are here for a reason."," May you discover your purpose, pursue it passionately, and leave an indelible mark on the world.",
+            "Remember, life is a gift—a series of chapters waiting to be written."," Your birthday marks the beginning of another captivating chapter."," May it be filled with love, laughter, and countless blessings.",
+            "Happy birthday, dear friend! 🎂🎈🎁",
+            "With heartfelt wishes","Your Best Friend","Awanish"
+        ];
+
+        let i = 0;
+        let messageElement = document.getElementById("message");
+
+        function displayMessage() {
+            if (i < message.length) {
+                messageElement.innerHTML = message[i];
+                messageElement.classList.add("show"); /* add show class to animate */
+                i++;
+                setTimeout(function () {
+                    messageElement.classList.remove("show"); /* remove show class to animate */
+                    setTimeout(displayMessage, 500); /* wait for animation to finish before displaying next message */
+                }, 4000); /* wait for 2.5 seconds before removing show class */
+            } else {
+                i = 0; /* reset i to 0 to create a loop */
+                displayMessage(); /* call displayMessage again to start the loop */
+            }
+        }
+
+        displayMessage();
+    </script>
+</body>
+
+</html>
